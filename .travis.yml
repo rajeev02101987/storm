@@ -38,6 +38,11 @@ matrix:
   include:
     - arch: s390x
       jdk: openjdk11
+    - arch: arm64
+      jdk: oraclejdk8
+    - arch: arm64
+      jdk: openjdk11
+  
       
 before_install:
   - rvm reload
