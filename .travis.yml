@@ -39,7 +39,7 @@ matrix:
     - arch: s390x
       jdk: openjdk11
     - arch: arm64
-      jdk: oraclejdk8
+      jdk: openjdk8
     - arch: arm64
       jdk: openjdk11
   
@@ -61,7 +61,7 @@ before_install:
 
 install: /bin/bash ./dev-tools/travis/travis-install.sh `pwd`
 script:
-  - if [[ $(uname -m) != 's390x' ]]; then 
+  - if [[ $(uname -m) != 's390x' ] || [ $(uname -m) != 'arm64' ]]; then 
       /bin/bash ./dev-tools/travis/travis-script.sh `pwd` $MODULES;
     fi
 cache:
