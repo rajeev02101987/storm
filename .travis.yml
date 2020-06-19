@@ -60,7 +60,7 @@ before_install:
   - sudo add-apt-repository ppa:deadsnakes/ppa -y
   - sudo apt-get update
   - sudo apt-get install python3.6
-  - from mock import MagicMock;
+#  - from mock import MagicMock;
 #  - sudo apt-get install openjdk-8-jdk;
  # - export PATH=/usr/lib/jvm/java-8-openjdk-arm64:$PATH;
   - export MVN_HOME=$HOME/apache-maven-3.6.3
