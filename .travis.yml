@@ -39,15 +39,14 @@ matrix:
     - arch: s390x
       jdk: openjdk11
     - arch: arm64
+      before_install: 
+        - if [ "${TRAVIS_CPU_ARCH}" == "arm64" ]; then
+           sudo apt-get install openjdk-8-jdk;
+           export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-arm64;
+           export PATH=$JAVA_HOME:$PATH;
+          fi
+    - arch: arm64
       jdk: openjdk11
- #     before_install: 
- #       - if [ "${TRAVIS_CPU_ARCH}" == "arm64" ]; then
- #          sudo apt-get install openjdk-8-jdk;
- #          export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-arm64;
- #          export PATH=$JAVA_HOME:$PATH;
-#          fi
- #   - arch: arm64
- #     jdk: openjdk11
   
       
 before_install:
