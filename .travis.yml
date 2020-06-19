@@ -72,9 +72,9 @@ install:
     fi
   - /bin/bash ./dev-tools/travis/travis-install.sh `pwd`
 script:
-  - if [[ $(uname -m) != 'arm64' ]]; then 
+  - if [[ $(uname -m) != 's390x' ]]; then 
       /bin/bash ./dev-tools/travis/travis-script.sh `pwd` $MODULES;
-    fi || true
+    fi
 cache:
   directories:
     - "$HOME/.m2/repository"
