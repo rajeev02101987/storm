@@ -17,10 +17,10 @@
 # limitations under the License.
 
 from unittest import TestCase, main as test_main
-from unittest.mock import MagicMock
 import mock
 import sys
 import os
+from mock import MagicMock
 
 
 class TestStormCli(TestCase):
