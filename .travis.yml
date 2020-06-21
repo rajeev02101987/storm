@@ -60,6 +60,12 @@ before_install:
   - sudo add-apt-repository ppa:deadsnakes/ppa -y
   - sudo apt-get update
   - sudo apt-get install python3.6
+  - if [ "${TRAVIS_CPU_ARCH}" == "arm64" ]; then
+     sudo apt-get install maven;
+     sudo apt-get update;
+     sudo -H pip install mock;
+     sudo -H pip3 install mock;
+    fi
 #  - from mock import MagicMock;
 #  - sudo apt-get install openjdk-8-jdk;
  # - export PATH=/usr/lib/jvm/java-8-openjdk-arm64:$PATH;
@@ -71,12 +77,6 @@ before_install:
   - echo 
 
 install: 
-  - if [ "${TRAVIS_CPU_ARCH}" == "arm64" ]; then
-     sudo apt-get install maven;
-     sudo apt-get update;
-     sudo pip install mock;
-     sudo pip3 install mock;
-    fi
   - /bin/bash ./dev-tools/travis/travis-install.sh `pwd`
 script:
   - if [[ $(uname -m) != 's390x' ]]; then 
