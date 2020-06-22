@@ -65,7 +65,6 @@ before_install:
      sudo apt-get update;
      sudo pip install mock;
      sudo pip3 install mock;
-   #  sudo pip install unittest;
     fi
 #  - from mock import MagicMock;
 #  - sudo apt-get install openjdk-8-jdk;
