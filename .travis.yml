@@ -16,11 +16,11 @@ addons:
 
 env:
   - MODULES=Client
-  - MODULES=Server
-  - MODULES=Core
-  - MODULES=External
-  - MODULES=Integration-Test
-  - MODULES=Check-Updated-License-Files
+#  - MODULES=Server
+#  - MODULES=Core
+#  - MODULES=External
+#  - MODULES=Integration-Test
+#  - MODULES=Check-Updated-License-Files
 
 dist: trusty
 sudo: required
@@ -31,7 +31,7 @@ before_cache:
 
 language: java
 jdk:
-  - oraclejdk8
+#  - oraclejdk8
   - openjdk11
   
 matrix:
@@ -47,13 +47,6 @@ matrix:
  #         fi
     - arch: arm64
       jdk: openjdk11
-      env:
-        - MODULES=Client
-        - MODULES=Server
-        - MODULES=Core
-        - MODULES=External
-        - MODULES=Integration-Test
-        - MODULES=Check-Updated-License-Files
   
       
 before_install:
