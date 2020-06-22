@@ -17,7 +17,7 @@
 # limitations under the License.
 
 from unittest import TestCase, main as test_main
-import unittest.mock
+#import mock
 import sys
 import os
 
