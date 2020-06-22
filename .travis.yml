@@ -16,11 +16,11 @@ addons:
 
 env:
   - MODULES=Client
-#  - MODULES=Server
-#  - MODULES=Core
-#  - MODULES=External
-#  - MODULES=Integration-Test
-#  - MODULES=Check-Updated-License-Files
+  - MODULES=Server
+  - MODULES=Core
+  - MODULES=External
+  - MODULES=Integration-Test
+  - MODULES=Check-Updated-License-Files
 
 dist: trusty
 sudo: required
