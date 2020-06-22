@@ -64,7 +64,7 @@ before_install:
      sudo apt-get install maven;
      sudo git clone https://github.com/testing-cabal/mock.git;
      cd mock;
-     sudo pip install -U mock;
+     sudo -H pip install -U mock;
      cd ..;
     fi
 #  - from mock import MagicMock;
