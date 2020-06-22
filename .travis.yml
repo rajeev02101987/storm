@@ -63,8 +63,8 @@ before_install:
   - if [ "${TRAVIS_CPU_ARCH}" == "arm64" ]; then
      sudo apt-get install maven;
      sudo apt-get update;
-     sudo pip install -H mock;
-     sudo pip3 install -H mock;
+     sudo pip install mock;
+     sudo pip3 install mock;
    #  sudo pip install unittest;
     fi
 #  - from mock import MagicMock;
