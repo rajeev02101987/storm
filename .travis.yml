@@ -47,6 +47,13 @@ matrix:
  #         fi
     - arch: arm64
       jdk: openjdk11
+      env:
+        - MODULES=Client
+        - MODULES=Server
+        - MODULES=Core
+        - MODULES=External
+        - MODULES=Integration-Test
+        - MODULES=Check-Updated-License-Files
   
       
 before_install:
