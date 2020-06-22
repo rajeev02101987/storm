@@ -17,7 +17,11 @@
 # limitations under the License.
 
 from unittest import TestCase, main as test_main
-import mock
+try:
+    from unittest.mock import MagicMock
+except ImportError:
+    from mock import MagicMock
+ 
 import sys
 import os
 
