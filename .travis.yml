@@ -65,7 +65,7 @@ before_install:
      sudo git clone https://github.com/testing-cabal/mock.git;
      cd mock;
      sudo pip install -U mock;
-     cd ..
+     cd ..;
     fi
 #  - from mock import MagicMock;
 #  - sudo apt-get install openjdk-8-jdk;
