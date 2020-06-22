@@ -18,9 +18,9 @@
 
 from unittest import TestCase, main as test_main
 try:
-    from unittest.mock import MagicMock
+    import unittest.mock
 except ImportError:
-    from mock import MagicMock
+    import mock
 
 import sys
 import os
