@@ -62,10 +62,7 @@ before_install:
   - sudo apt-get install python3.6
   - if [ "${TRAVIS_CPU_ARCH}" == "arm64" ]; then
      sudo apt-get install maven;
-     sudo git clone https://github.com/testing-cabal/mock.git;
-     cd mock;
-     sudo -H pip install -U mock;
-     cd ..;
+     sudo -H pip install mock;
     fi
 #  - from mock import MagicMock;
 #  - sudo apt-get install openjdk-8-jdk;
