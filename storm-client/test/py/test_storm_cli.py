@@ -17,12 +17,14 @@
 # limitations under the License.
 
 from unittest import TestCase, main as test_main
-try:
-    from unittest import mock
-except ImportError:
-    import mock
 
 import sys
+if sys.version_info >= (3, 3):
+    from unittest import mock
+else:
+    import mock
+
+
 import os
 
 
