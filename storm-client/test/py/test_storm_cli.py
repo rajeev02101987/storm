@@ -18,7 +18,7 @@
 
 from unittest import TestCase, main as test_main
 try:
-    import unittest.mock
+    from unittest import mock
 except ImportError:
     import mock
 
