@@ -63,7 +63,6 @@ before_install:
   - if [ "${TRAVIS_CPU_ARCH}" == "arm64" ]; then
      sudo apt-get install maven;
      pip install mock;
-     pip3 install mock;
     fi
 #  - from mock import MagicMock;
 #  - sudo apt-get install openjdk-8-jdk;
